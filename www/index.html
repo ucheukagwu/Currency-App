@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />  
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+        <title>Currency Converter</title>
+    </head>
+    <body>
+ 
+		<div class="main">
+			<h1>Currency Converter</h1>
+			<section class="ac-container">
+				<div>
+					<input id="ac-1" name="accordion-1" type="checkbox" />
+					<label for="ac-1" class="grid1"><i class="fa fa-gbp"></i>Pounds</label>
+					<article class="ac-small">
+                    
+                    <div class="signup">
+                    <br> <span class="currency">Convert Pounds to Naira</span> <br>
+		<span class="money">1&pound; = ₦400</span>
+        <p>Amount</p>
+        <form method="post" name="myForm" onsubmit="return(validate());">
+		<input type="text" name="pounds"  onkeyup="calculateTotal()" placeholder="Enter the amount you want to convert" required="">
+         </form>       
+        <div class="total"> Total:   ₦<span id="update">0.00</span> </div> <br>
+        
+                      <script type="text/javascript">
+					  
+function format(n, sep, decimals) {
+    sep = sep || "."; // Default to period as decimal separator
+    decimals = decimals || 2; // Default to 2 decimals
+
+    return n.toLocaleString().split(sep)[0]
+        + sep
+        + n.toFixed(decimals).split(sep)[1];
+}				  
+					  
+	function calculateTotal() {		
+		var totalAmt = document.myForm.pounds.value;
+		//totalR = eval(totalAmt * document.addem.qty.value);
+		//totalR = round((totalAmt * document.addem.qty.value),2);
+		totalR = format(totalAmt * 400);
+		document.getElementById('update').innerHTML = totalR;
+	}
+
+</script>
+</div>
+					</article>
+				</div>
+                
+                <!--- DOLLARS  -->
+				<div>
+                	<input id="ac-2" name="accordion-1" type="checkbox" />
+					<label for="ac-2" class="grid2"><i class="fa fa-usd"></i></i>Dollars</label>
+					<article class="ac-small">
+                    
+                    <div class="signup">
+                    <br> <span class="currency">Convert Dollars to Naira</span> <br>
+		<span class="money">1$ = ₦280</span>
+        <p>Amount</p>
+        <form method="post" name="dollarForm" onsubmit="return(validate());">
+		<input type="text" name="dollars"  onkeyup="calculateDollar()" placeholder="Enter the amount you want to convert" required="">
+         </form>       
+        <div class="total"> Total:   ₦<span id="updatedollar">0.00</span> </div> <br>
+        
+                      <script type="text/javascript">
+					  
+function format(n, sep, decimals) {
+    sep = sep || "."; // Default to period as decimal separator
+    decimals = decimals || 2; // Default to 2 decimals
+
+    return n.toLocaleString().split(sep)[0]
+        + sep
+        + n.toFixed(decimals).split(sep)[1];
+}				  
+					  
+	function calculateDollar() {		
+		var totalAmt = document.dollarForm.dollars.value;
+		//totalR = eval(totalAmt * document.addem.qty.value);
+		//totalR = round((totalAmt * document.addem.qty.value),2);
+		totalR = format(totalAmt * 280);
+		document.getElementById('updatedollar').innerHTML = totalR;
+	}
+
+</script>
+
+</div>
+					</article>
+				</div>
+	<!--- EURO HERE ----->
+				<div>
+					<input id="ac-3" name="accordion-1" type="checkbox" />
+					<label for="ac-3" class="grid3"><i class="fa fa-eur"></i> Euro</label>
+					<article class="ac-small">
+				       <div class="signup">
+                    <br> <span class="currency">Convert Euro to Naira</span> <br>
+		<span class="money">1&euro; = ₦340</span>
+        <p>Amount</p>
+        <form method="post" name="euroForm" onsubmit="return(validate());">
+		<input type="text" name="euro"  onkeyup="calculateEuro()" placeholder="Enter the amount you want to convert" required="">
+         </form>       
+        <div class="total"> Total:   ₦<span id="updateeuro">0.00</span> </div> <br>
+        
+                      <script type="text/javascript">
+					  
+function format(n, sep, decimals) {
+    sep = sep || "."; // Default to period as decimal separator
+    decimals = decimals || 2; // Default to 2 decimals
+
+    return n.toLocaleString().split(sep)[0]
+        + sep
+        + n.toFixed(decimals).split(sep)[1];
+}				  
+					  
+	function calculateEuro() {		
+		var totalAmt = document.euroForm.euro.value;
+		//totalR = eval(totalAmt * document.addem.qty.value);
+		//totalR = round((totalAmt * document.addem.qty.value),2);
+		totalR = format(totalAmt * 340);
+		document.getElementById('updateeuro').innerHTML = totalR;
+	}
+
+</script>
+</div>
+					</article>
+				</div>
+                <!--- JAPANESS YEN -->
+				<div>
+					<input id="ac-4" name="accordion-1" type="checkbox" />
+					<label for="ac-4" class="grid4"><i class="fa fa-jpy"></i>Japanese Ye</label>
+					<article class="ac-small">
+						       <div class="signup">
+                    <br> <span class="currency">Convert Japanese Yen to Naira</span> <br>
+		<span class="money">1&yen; = ₦2</span>
+        <p>Amount</p>
+        <form method="post" name="yenForm" onsubmit="return(validate());">
+		<input type="text" name="yen"  onkeyup="calculateYen()" placeholder="Enter the amount you want to convert" required="">
+         </form>       
+        <div class="total"> Total:   ₦<span id="updateyen">0.00</span> </div> <br>
+        
+                      <script type="text/javascript">				  
+					  
+	function calculateYen() {		
+		var totalAmt = document.yenForm.yen.value;
+		totalR = format(totalAmt * 2);
+		document.getElementById('updateyen').innerHTML = totalR;
+	}
+
+</script>
+</div>
+		
+					</article>
+				</div>
+				<div>
+					<input id="ac-5" name="accordion-1" type="checkbox" />
+					<label for="ac-5" class="grid5"><i class="fa fa-gift"></i>Donate</label>
+					<article class="ac-small">
+					Donate to Afridigit
+					</article>
+				</div>
+				<div>
+					<input id="ac-6" name="accordion-1" type="checkbox" />
+					<label for="ac-6" class="grid6"><i class="fa fa-building"></i>Afridigit</label>
+					<article class="ac-small">
+						<ul>
+							<li><a href="about-us.html" rel="external">About Afridigit</a></li>
+							<li><a href="services.html" rel="external">Services</a></li>
+							<li><a href="contact-us.html" rel="external">Contact Us</a></li>
+						</ul>
+					</article>
+				</div>
+			
+            	<!---		<div>
+			<input id="ac-7" name="accordion-1" type="checkbox" />
+					<label for="ac-7" class="grid7"><i></i>Currency Exchange</label>
+					<article class="ac-small">
+						<ul>
+							<li><a href="#">My Accounts</a></li>
+							<li><a href="#">Statement</a></li>
+							<li><a href="#">Top Up Account</a></li>
+							<li><a href="#">Open New Account</a></li>
+							<li><a href="#">List Of Operations</a></li>
+						</ul>
+					</article>
+				</div>
+                --->
+			</section>
+		</div>
+		<div class="footer">
+			<p>Currency Calculator developed by <a href="http://afridigit.net">Afridigit Ltd</a></p>
+		</div>
+ 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
